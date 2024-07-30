@@ -1,6 +1,5 @@
 # DSA
 
-### Introduction
 This repository is a curated collection of data structures and algorithms implemented in Python. It covers a wide range of topics, from fundamental concepts to advanced techniques, making it a valuable resource for learners and enthusiasts alike.
 
 ### Topics Covered
