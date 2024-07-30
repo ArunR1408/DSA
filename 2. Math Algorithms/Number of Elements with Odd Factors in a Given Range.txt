@@ -1,0 +1,5 @@
+def countOddSquares(n, m): 
+    return int(m**0.5) - int((n-1)**0.5) 
+  
+n,m=list(map(int,input().split()))
+print(countOddSquares(n, m))

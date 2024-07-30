@@ -1,0 +1,32 @@
+import math
+
+def is_perfect_square(n):
+    if n < 0:
+        return False
+    root = int(math.isqrt(n))
+    return root * root == n
+
+def is_fibonacci(n):
+    if n < 0:
+        return False
+    
+    # Calculate the values
+    test1 = 5 * n * n + 4
+    test2 = 5 * n * n - 4
+    
+    # Check if either is a perfect square
+    return is_perfect_square(test1) or is_perfect_square(test2)
+
+def main():
+    import sys
+    input = sys.stdin.read().strip()
+    
+    n = int(input)
+    
+    if is_fibonacci(n):
+        print("Yes")
+    else:
+        print("No")
+
+if __name__ == "__main__":
+    main()

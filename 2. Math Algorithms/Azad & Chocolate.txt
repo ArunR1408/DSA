@@ -1,0 +1,11 @@
+def amount(N):
+    for x in range(34):  # 100 // 3 + 1
+        for y in range(15):  # 100 // 7 + 1
+            if 100 - (x * 3 + y * 7) == N:
+                return 1
+    return 0
+
+T = int(input())
+for _ in range(T):
+  N = int(input().strip())
+  print(amount(N))

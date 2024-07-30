@@ -1,0 +1,23 @@
+def digital_root(n):
+    """Compute the digital root of a number."""
+    if n == 0:
+        return 0
+    else:
+        return n % 9 or 9
+
+def main():
+    import sys
+    input = sys.stdin.read().strip().split()
+    
+    T = int(input[0])
+    results = []
+    
+    for i in range(1, T + 1):
+        number = int(input[i])
+        results.append(digital_root(number))
+    
+    for result in results:
+        print(result)
+
+if __name__ == "__main__":
+    main()

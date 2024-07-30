@@ -1,0 +1,32 @@
+def maximum_extra_amount(actual_amount):
+    # Convert actual amount to string to process each digit
+    str_amount = str(actual_amount)
+    
+    # Create mistaken amount by replacing '6' with '9'
+    mistaken_amount = str_amount.replace('6', '9')
+    
+    # Convert mistaken amount back to integer
+    mistaken_amount = int(mistaken_amount)
+    
+    # Calculate the maximum possible extra amount
+    extra_amount = mistaken_amount - actual_amount
+    
+    return extra_amount
+
+def main():
+    import sys
+    input = sys.stdin.read
+    data = input().strip().split()
+    
+    T = int(data[0])
+    results = []
+    
+    for i in range(1, T + 1):
+        actual_amount = int(data[i])
+        results.append(maximum_extra_amount(actual_amount))
+    
+    for result in results:
+        print(result)
+
+if __name__ == "__main__":
+    main()

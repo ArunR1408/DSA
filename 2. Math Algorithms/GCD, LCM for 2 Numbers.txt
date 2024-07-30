@@ -1,0 +1,20 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b, gcd_val):
+    return abs(a * b) // gcd_val
+
+# Read input
+n1, n2 = map(int, input().split())
+
+# Compute GCD
+gcd_val = gcd(n1, n2)
+
+# Compute LCM
+lcm_val = lcm(n1, n2, gcd_val)
+
+# Print the results
+print(gcd_val)
+print(lcm_val)

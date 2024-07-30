@@ -1,0 +1,12 @@
+def calculate_angle(H, M):
+    if not (1 <= H <= 12) or not (0 <= M < 60):
+        return "Invalid Input"
+    hour_angle = (H % 12) * 30 + M * 0.5
+    minute_angle = M * 6
+    angle = abs(hour_angle - minute_angle)
+    smallest_angle = min(angle, 360 - angle)
+
+    return smallest_angle
+
+H, M = list(map(int,input().split()))
+print(calculate_angle(H, M))

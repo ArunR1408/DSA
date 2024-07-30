@@ -1,0 +1,18 @@
+def sum_up_to(n):
+    return n * (n + 1) // 2
+
+def sum_in_range(a, b):
+    if a > b:
+        return 0  # Return 0 if the range is invalid
+    return sum_up_to(b) - sum_up_to(a - 1)
+
+def main():
+    # Input the range
+    a,b = list(map(int,input().split()))
+    
+    # Calculate and print the sum in the range
+    result = sum_in_range(a, b)
+    print(result)
+
+if __name__ == "__main__":
+    main()

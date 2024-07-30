@@ -1,0 +1,32 @@
+from itertools import permutations
+
+def find_smallest_multiple(N, d):
+    digits = list(str(N))
+    smallest_multiple = None
+    
+    # Generate all unique permutations
+    for perm in set(permutations(digits)):
+        # Join tuple to form the number string and remove leading zeros
+        num_str = ''.join(perm).lstrip('0')
+        if not num_str:  # Handle the case where num_str becomes empty
+            num_str = '0'
+        num = int(num_str)
+        
+        # Check if it is a multiple of d
+        if num % d == 0:
+            if smallest_multiple is None or num < smallest_multiple:
+                smallest_multiple = num
+    
+    # Return the result
+    return smallest_multiple if smallest_multiple is not None else -1
+
+def main():
+    import sys
+    input = sys.stdin.read().strip()
+    N, d = map(int, input.split())
+    
+    result = find_smallest_multiple(N, d)
+    print(result)
+
+if __name__ == "__main__":
+    main()

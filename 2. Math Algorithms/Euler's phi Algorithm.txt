@@ -1,0 +1,12 @@
+def gcd(a, b):
+    if (a == 0):
+        return b
+    return gcd(b % a, a);
+def findSum(N):
+    sum = 0;
+    for i in range(1, N):
+        if (gcd(i, N) == 1):
+            sum += i
+    return sum;
+N = int(input())
+print(findSum(N))
