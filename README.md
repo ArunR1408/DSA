@@ -1,6 +1,10 @@
-# DSA
+# Data Structures and Algorithms
 
-This repository is a curated collection of data structures and algorithms implemented in Python. It covers a wide range of topics, from fundamental concepts to advanced techniques, making it a valuable resource for learners and enthusiasts alike.
+A curated collection of data structures and algorithms implemented in Python, covering various topics such as linked lists, graphs, trees, dynamic programming, and more.
+
+## Features
+- Implementation of various data structures
+- Sample problems and solutions
 
 ### Topics Covered
 * **Mathematical Algorithms & Recursion**
@@ -29,6 +33,11 @@ To contribute to this repository, please follow these steps:
 4. Commit and push your changes
 5. Submit a pull request
 
+## Usage
+Clone the repository to explore the data structures and algorithms implemented in Python.
+
 ### Contributions
 Contributions are welcome! Feel free to open issues or pull requests for bug fixes, new features, or improvements.
+
+
 
